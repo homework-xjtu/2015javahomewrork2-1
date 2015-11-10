@@ -8,4 +8,31 @@
 
 ***
 
+In this homework, I implemented a set of components 
+which simulates a simple UI framework including a 
+button control, a text control and a box control.
+The framework is an ecapsulation of `swing`.
+
+There are three interfaces in this package, which are 
+`IUiUpdatable`, `IUiStateSavable`, `IUiEventHandler`.
+
+  * `IUiUpdatable` indecates a class can be updated
+     by invocating `updateUi()` method
+  * `IUiStateSavable` indecates a class can be save and 
+     restore its state in the form of `String`
+  * `IUiEventHandler` indecates a class can be used as 
+     a event handler. 
+
+Then, the tiny UI framework has a root class for all of 
+the visual element called `UiElement`. From this root, 
+there are some independent classes which extend from 
+it and implement the `IUiUpdatable` and `IUiStateSavable`
+interface.
+
+
+The `Main` class contains a `main` function which is a
+ entry point for testing this framework.
+
+***
+
 Jack Q
