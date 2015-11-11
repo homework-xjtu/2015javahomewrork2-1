@@ -1,7 +1,6 @@
 package cn.edu.xjtu.se.jackq.simpleui;
 
 import javax.swing.*;
-import java.awt.*;
 
 
 public class UiText extends UiElement implements IUiStateSavable<UiText> {
@@ -31,7 +30,7 @@ public class UiText extends UiElement implements IUiStateSavable<UiText> {
     }
 
     @Override
-    public Component getComponent() {
+    public JComponent getComponent() {
         return label;
     }
 }

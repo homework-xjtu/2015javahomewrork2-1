@@ -8,6 +8,8 @@
 
 ***
 
+## introduce ##
+
 In this homework, I implemented a set of components 
 which simulates a simple UI framework including a 
 button control, a text control and a box control.
@@ -29,9 +31,23 @@ there are some independent classes which extend from
 it and implement the `IUiUpdatable` and `IUiStateSavable`
 interface.
 
+To manage the ui elements that implemented `IUiStateSavable`
+interface, there is a singlton named `UiStateManager` which provides
+`saveState` and `loadState` method to perform IO operations.
 
 The `Main` class contains a `main` function which is a
  entry point for testing this framework.
+
+***
+
+### update ###
+* Nov 11, 2015
+  * Add UiStateManager
+  * Update the state string of `UiBox` to make is more recognizable
+  * Add buttons to control blink
+  
+* Nov 10, 2015
+  * First commit
 
 ***
 

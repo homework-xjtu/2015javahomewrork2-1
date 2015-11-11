@@ -1,6 +1,6 @@
 package cn.edu.xjtu.se.jackq.simpleui;
 
-import java.awt.*;
+import javax.swing.*;
 
 public abstract class UiElement {
     private int x;
@@ -27,6 +27,6 @@ public abstract class UiElement {
         this.y = y;
     }
 
-    public abstract Component getComponent();
+    public abstract JComponent getComponent();
 
 }

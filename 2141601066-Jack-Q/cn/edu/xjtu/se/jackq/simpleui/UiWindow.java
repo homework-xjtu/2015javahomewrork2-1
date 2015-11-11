@@ -10,9 +10,10 @@ public class UiWindow extends UiContainer {
 
     public UiWindow(){
         frame.add(panel);
-        frame.setLocation(300,200);
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        frame.setLocation(400,220);
         frame.setVisible(true);
-        frame.setSize(300, 200);
+        frame.setSize(400, 220);
         frame.setBackground(Color.white);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
@@ -21,12 +22,12 @@ public class UiWindow extends UiContainer {
     public void addChild(UiElement element) {
         super.addChild(element);
         panel.add(element.getComponent());
-frame.repaint();
+        frame.repaint();
     }
 
 
     @Override
-    public Component getComponent() {
-        return frame;
+    public JComponent getComponent() {
+        return panel;
     }
 }

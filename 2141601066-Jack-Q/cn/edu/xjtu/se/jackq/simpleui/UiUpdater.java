@@ -8,13 +8,20 @@ public class UiUpdater {
 
     protected ArrayList<IUiUpdatable> updatableChildren = new ArrayList<>();
 
+    public void stop() {
+        timer.stop();
+    }
+
+    public void start() {
+        timer.start();
+    }
 
     public UiUpdater(int interval) {
         timer = new Timer(interval, (event) -> updatableChildren.forEach(IUiUpdatable::updateUi));
         timer.start();
     }
 
-    public void setInterval(int interval){
+    public void setInterval(int interval) {
         timer.setDelay(interval);
         timer.restart();
     }
