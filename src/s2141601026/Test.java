@@ -1,7 +1,8 @@
 /**
  * 
  */
-import s2141601026.*;
+package s2141601026;
+
 import java.io.*;
 /**
  * 测试类
