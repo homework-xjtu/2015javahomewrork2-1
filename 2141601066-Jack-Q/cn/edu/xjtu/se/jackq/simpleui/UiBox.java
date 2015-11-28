@@ -7,23 +7,23 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class UiBox extends UiElement implements IUiUpdatable, IUiStateSavable<UiBox> {
+public class UIBox extends UIElement implements IUIUpdatable, IUIStateSavable<UIBox> {
     private static Random random = new Random();
     private JPanel box = new JPanel();
 
-    public UiBox() {
+    public UIBox() {
         box.setSize(30, 30);
-        updateUi();
+        updateUI();
     }
 
     @Override
-    public void updateUi() {
+    public void updateUI() {
         box.setBackground(new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255)));
     }
 
 
     @Override
-    public UiBox loadStateFromString(String state) {
+    public UIBox loadStateFromString(String state) {
         Pattern hexColorPattern = Pattern.compile("#([0-9A-Fa-f]{2})([0-9A-Fa-f]{2})([0-9A-Fa-f]{2})",
                 Pattern.CASE_INSENSITIVE);
         Matcher matcher = hexColorPattern.matcher(state);

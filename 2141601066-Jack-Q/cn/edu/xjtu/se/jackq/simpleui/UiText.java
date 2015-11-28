@@ -3,14 +3,14 @@ package cn.edu.xjtu.se.jackq.simpleui;
 import javax.swing.*;
 
 
-public class UiText extends UiElement implements IUiStateSavable<UiText> {
+public class UIText extends UIElement implements IUIStateSavable<UIText> {
     private JLabel label;
 
-    public UiText(String string) {
+    public UIText(String string) {
         this.label = new JLabel(string);
     }
 
-    public UiText() {
+    public UIText() {
         this("");
     }
 
@@ -19,7 +19,7 @@ public class UiText extends UiElement implements IUiStateSavable<UiText> {
     }
 
     @Override
-    public UiText loadStateFromString(String state) {
+    public UIText loadStateFromString(String state) {
         label.setText(state);
         return this;
     }

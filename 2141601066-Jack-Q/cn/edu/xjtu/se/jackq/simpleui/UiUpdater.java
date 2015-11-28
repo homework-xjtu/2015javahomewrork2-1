@@ -3,10 +3,10 @@ package cn.edu.xjtu.se.jackq.simpleui;
 import javax.swing.*;
 import java.util.ArrayList;
 
-public class UiUpdater {
+public class UIUpdater {
     private Timer timer;
 
-    protected ArrayList<IUiUpdatable> updatableChildren = new ArrayList<>();
+    protected ArrayList<IUIUpdatable> updatableChildren = new ArrayList<>();
 
     public void stop() {
         timer.stop();
@@ -16,8 +16,8 @@ public class UiUpdater {
         timer.start();
     }
 
-    public UiUpdater(int interval) {
-        timer = new Timer(interval, (event) -> updatableChildren.forEach(IUiUpdatable::updateUi));
+    public UIUpdater(int interval) {
+        timer = new Timer(interval, (event) -> updatableChildren.forEach(IUIUpdatable::updateUI));
         timer.start();
     }
 
@@ -26,7 +26,7 @@ public class UiUpdater {
         timer.restart();
     }
 
-    public void add(IUiUpdatable updatable) {
+    public void add(IUIUpdatable updatable) {
         updatableChildren.add(updatable);
     }
 }
