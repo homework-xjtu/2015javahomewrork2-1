@@ -1,4 +1,4 @@
-# 2015 Java Homework 2-1 #
+﻿# 2015 Java Homework 2-1 #
 
 ***
 
@@ -13,26 +13,26 @@
 In this homework, I implemented a set of components 
 which simulates a simple UI framework including a 
 button control, a text control and a box control.
-The framework is an ecapsulation of `swing`.
+The framework is an encapsulation of `swing`.
 
 There are three interfaces in this package, which are 
-`IUiUpdatable`, `IUiStateSavable`, `IUiEventHandler`.
+`IUIUpdatable`, `IUIStateSavable`, `IUIEventHandler`.
 
-  * `IUiUpdatable` indecates a class can be updated
-     by invocating `updateUi()` method
-  * `IUiStateSavable` indecates a class can be save and 
+  * `IUIUpdatable` indicates a class can be updated
+     by invoking `updateUI()` method
+  * `IUIStateSavable` indicates a class can be save and 
      restore its state in the form of `String`
-  * `IUiEventHandler` indecates a class can be used as 
+  * `IUIEventHandler` indicates a class can be used as 
      a event handler. 
 
 Then, the tiny UI framework has a root class for all of 
-the visual element called `UiElement`. From this root, 
+the visual element called `UIElement`. From this root, 
 there are some independent classes which extend from 
-it and implement the `IUiUpdatable` and `IUiStateSavable`
+it and implement the `IUIUpdatable` and `IUIStateSavable`
 interface.
 
-To manage the ui elements that implemented `IUiStateSavable`
-interface, there is a singlton named `UiStateManager` which provides
+To manage the UI elements that implemented `IUIStateSavable`
+interface, there is a singleton named `UIStateManager` which provides
 `saveState` and `loadState` method to perform IO operations.
 
 The `Main` class contains a `main` function which is a
@@ -41,9 +41,12 @@ The `Main` class contains a `main` function which is a
 ***
 
 ### update ###
+* Nov 28, 2015
+  * Rename identifiers with `Ui` to ``
+
 * Nov 11, 2015
-  * Add UiStateManager
-  * Update the state string of `UiBox` to make is more recognizable
+  * Add UIStateManager
+  * Update the state string of `UIBox` to make is more recognizable
   * Add buttons to control blink
   
 * Nov 10, 2015

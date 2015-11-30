@@ -2,7 +2,7 @@ package cn.edu.xjtu.se.jackq.simpleui;
 
 import javax.swing.*;
 
-public abstract class UiElement {
+public abstract class UIElement {
     private int x;
     private int y;
 

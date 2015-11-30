@@ -4,11 +4,11 @@ package cn.edu.xjtu.se.jackq.simpleui;
 import javax.swing.*;
 import java.awt.*;
 
-public class UiWindow extends UiContainer {
+public class UIWindow extends UIContainer {
     private JFrame frame = new JFrame();
     private JPanel panel = new JPanel();
 
-    public UiWindow(){
+    public UIWindow(){
         frame.add(panel);
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         frame.setLocation(400,220);
@@ -19,7 +19,7 @@ public class UiWindow extends UiContainer {
     }
 
     @Override
-    public void addChild(UiElement element) {
+    public void addChild(UIElement element) {
         super.addChild(element);
         panel.add(element.getComponent());
         frame.repaint();

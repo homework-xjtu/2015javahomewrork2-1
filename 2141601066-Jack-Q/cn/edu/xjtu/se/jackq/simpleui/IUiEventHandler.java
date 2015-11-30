@@ -1,6 +1,6 @@
 package cn.edu.xjtu.se.jackq.simpleui;
 
 
-public interface IUiEventHandler {
+public interface IUIEventHandler {
     public void onEvent();
 }

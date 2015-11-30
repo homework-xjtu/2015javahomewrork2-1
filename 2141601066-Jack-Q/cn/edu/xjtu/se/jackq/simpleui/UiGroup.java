@@ -2,15 +2,15 @@ package cn.edu.xjtu.se.jackq.simpleui;
 
 import javax.swing.*;
 
-public class UiGroup extends UiContainer {
+public class UIGroup extends UIContainer {
     private JPanel panel;
 
-    public UiGroup(){
+    public UIGroup(){
         this.panel = new JPanel();
     }
 
     @Override
-    public void addChild(UiElement element) {
+    public void addChild(UIElement element) {
         super.addChild(element);
         panel.add(element.getComponent());
         element.getComponent().doLayout();

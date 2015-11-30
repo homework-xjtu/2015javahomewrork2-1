@@ -4,15 +4,15 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class UiStateManager {
+public class UIStateManager {
     private static final String FILE_NAME = "output";
 
-    private UiStateManager() {
+    private UIStateManager() {
     }
 
-    public void saveState(Iterable<IUiStateSavable> iterable) {
+    public void saveState(Iterable<IUIStateSavable> iterable) {
         try (FileWriter fileWriter = new FileWriter(FILE_NAME)) {
-            for (IUiStateSavable element : iterable) {
+            for (IUIStateSavable element : iterable) {
                 appendElementState(element, fileWriter);
             }
         } catch (IOException e) {
@@ -21,9 +21,9 @@ public class UiStateManager {
 
     }
 
-    public void loadState(Iterable<IUiStateSavable> iterable) {
+    public void loadState(Iterable<IUIStateSavable> iterable) {
         try (FileReader fileReader = new FileReader(FILE_NAME)) {
-            for (IUiStateSavable element : iterable) {
+            for (IUIStateSavable element : iterable) {
                 loadElementState(element, fileReader);
             }
         } catch (IOException e) {
@@ -31,14 +31,14 @@ public class UiStateManager {
         }
     }
 
-    private void appendElementState(IUiStateSavable element, FileWriter writer) throws IOException {
+    private void appendElementState(IUIStateSavable element, FileWriter writer) throws IOException {
         String state = element.getStateString();
         writer.write(state);
         writer.append('\n');
         writer.flush();
     }
 
-    private void loadElementState(IUiStateSavable element, FileReader reader) throws IOException {
+    private void loadElementState(IUIStateSavable element, FileReader reader) throws IOException {
 
         char ch;
         StringBuilder stringBuilder = new StringBuilder();
@@ -49,9 +49,9 @@ public class UiStateManager {
         element.loadStateFromString(stringBuilder.substring(0, stringBuilder.length() - 1));
     }
 
-    private static UiStateManager instance = new UiStateManager();
+    private static UIStateManager instance = new UIStateManager();
 
-    public static UiStateManager get() {
+    public static UIStateManager get() {
         return instance;
     }
 }

@@ -4,9 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 
-public class UiButton extends UiElement {
+public class UIButton extends UIElement {
     private JButton button;
-    public UiButton(String s, IUiEventHandler handler){
+    public UIButton(String s, IUIEventHandler handler){
         this.button = new JButton();
         this.button.setAction(new AbstractAction() {
             @Override
